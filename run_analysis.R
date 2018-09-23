@@ -63,8 +63,8 @@ colnames(data.activity) <- c('activity')
 # Stack everything together
 data <- cbind(data.subject, data.activity, data.measures)
 # Write the cleaned dataset.
-write.table(data, 'UCI-HAR-dataset-clean.txt')
+write.table(data, 'UCI-HAR-dataset-clean.txt', row.name = FALSE)
 
 # 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 data.averages <- aggregate(data[, names(data) != c('subject', 'activity')], by = list(activity = data$activity, subject=data$subject), FUN = mean)
-write.table(data.averages, 'UCI-HAR-dataset-averages.txt', row.name=FALSE)
+write.table(data.averages, 'UCI-HAR-dataset-averages.txt', row.name = FALSE)
