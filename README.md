@@ -8,3 +8,5 @@ Everything is handled by running `run_analysis.R`. This will:
 1. Join the various datasets together into a single table labels for activity type along with tidy measure names.
 1. Write the tidy dataset to **UCI-HAR-dataset-clean.txt** in the local working directory and save the same data to the global variable `data`.
 1. Write a second dataset which groups the above by subject and activity, averaging each measure, to **UCI-DAR-dataset-average.txt** and the global variable `data.averages`.
+
+More information on the actual data is available in the `CodeBook.md` file.
