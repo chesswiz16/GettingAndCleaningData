@@ -67,4 +67,4 @@ write.table(data, 'UCI-HAR-dataset-clean.txt')
 
 # 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 data.averages <- aggregate(data[, names(data) != c('subject', 'activity')], by = list(activity = data$activity, subject=data$subject), FUN = mean)
-write.table(data.averages, 'UCI-HAR-dataset-averages.txt')
+write.table(data.averages, 'UCI-HAR-dataset-averages.txt', row.name=FALSE)
